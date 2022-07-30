@@ -25,5 +25,4 @@ $primary_4: #6FCBA1;
 
 </style>
 
-
 <slot />  
