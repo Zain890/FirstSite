@@ -1,23 +1,26 @@
 <script>
-    import { pokemon } from "$lib/pokemon-api-client";
-    console.log($pokemon)
-
+	import { pokemon } from '$lib/pokemon-api-client';
 </script>
 
 <svelte:head>
-    <title>Pokemanz!</title>
+	<title>Pokemanz!</title>
 </svelte:head>
 
-<body>
-    <h1 class="underline">Pokemon!</h1>
-</body>
+<div class="">
+	<h1 class="underline">Pokemon!</h1>
 
-{#each $pokemon as pokeman}
-<p>{pokeman.name}</p>
-{/each}
-
-
+	{#each $pokemon as pokeman}
+		<!-- <Pokemon pokeboi={pokemon} /> -->
+		<div class="Card-Container">
+			<div class="Card-Title">
+				<p>{pokeman.name}</p>
+			</div>
+			<div class="Card-Image" />
+			<div class="Card-Content m-5 p-5 w-36 h-48 shadow-inner border" />
+			<div class="Card-Extra-Info" />
+		</div>
+	{/each}
+</div>
 
 <style>
-
 </style>
